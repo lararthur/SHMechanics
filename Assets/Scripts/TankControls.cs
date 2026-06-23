@@ -107,8 +107,8 @@ public class TankControls : MonoBehaviour
             EnemyHealth enemy = hit.collider.GetComponent<EnemyHealth>();
             if (enemy != null)
             {
-                // Deal damage!
-                enemy.TakeDamage(gunDamage);
+                // Deal damage! Also, we pass hit.point (the exact 3D coordinate of the impact) to the enemy
+                enemy.TakeDamage(gunDamage, hit.point);
             }
         }
 
