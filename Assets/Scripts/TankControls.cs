@@ -22,6 +22,7 @@ public class TankControls : MonoBehaviour
     public int gunDamage = 1;
     public float weaponRange = 50f;
     private bool isAiming;
+    public ParticleSystem muzzleFlashParticles;
 
     void Start()
     {
@@ -98,6 +99,12 @@ public class TankControls : MonoBehaviour
     void Shoot()
     {
         Debug.Log("Bang!");
+
+        // NEW: Play the muzzle flash visual effect
+        if (muzzleFlashParticles != null)
+        {
+            muzzleFlashParticles.Play();
+        }
 
         // Shoot an invisible raycast straight forward from the gun barrel
         RaycastHit hit;
