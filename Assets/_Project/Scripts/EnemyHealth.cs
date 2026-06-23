@@ -36,26 +36,7 @@ public class EnemyHealth : MonoBehaviour
         Debug.Log("Enemy defeated!");
         isDead = true;
 
-        Quaternion startRotation = transform.rotation;
-        // Calculate exactly where they need to end up (current rotation + 90 degrees on X)
-        Quaternion targetRotation = startRotation * Quaternion.Euler(90f, 0f, 0f);
-
-        float timeElapsed = 0f;
-
-        // Loop this block of code until the duration is reached
-        while (timeElapsed < deathAnimationDuration)
-        {
-            // Slerp (Spherical Linear Interpolation) smoothly blends between two rotations based on time
-            transform.rotation = Quaternion.Slerp(startRotation, targetRotation, timeElapsed / deathAnimationDuration);
-            timeElapsed += Time.deltaTime;
-
-            // "yield return null" tells Unity to pause this function here, render the frame, and come back next frame
-            yield return null;
-        }
-
-        transform.rotation = targetRotation;
-
-        //StartCoroutine(LayDownAndDie());
-        //Destroy(gameObject); // Removes the enemy from the scene
+        // Call the utility function! We pass 'transform', the 90-degree X offset, and the duration.
+        yield return StartCoroutine(TransformUtils.RotationAnimation(transform, new Vector3(90f, 0f, 0f), deathAnimationDuration));
     }
 }

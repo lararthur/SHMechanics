@@ -1,22 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\arthu\\OneDrive\\Documentos\\study\\SHmechanics\\",
+  "WorkspaceRootPath": "C:\\Users\\arthu\\Documents\\estudos\\unity\\SHMechanics\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\arthu\\onedrive\\documentos\\study\\shmechanics\\assets\\scripts\\tankcontrols.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\tankcontrols.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\arthu\\OneDrive\\Documentos\\study\\SHmechanics\\Assets\\Scripts\\CameraZone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\CameraZone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:2:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\arthu\\OneDrive\\Documentos\\study\\SHmechanics\\Assets\\Scripts\\CameraZone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:2:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\CameraZone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\arthu\\onedrive\\documentos\\study\\shmechanics\\assets\\scripts\\enemyhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemyhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\arthu\\Documents\\estudos\\unity\\SHMechanics\\Assets\\Scripts\\EnemyHealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\EnemyHealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,52 +19,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "TankControls.cs",
-              "DocumentMoniker": "C:\\Users\\arthu\\OneDrive\\Documentos\\study\\SHmechanics\\Assets\\Scripts\\TankControls.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\TankControls.cs",
-              "ToolTip": "C:\\Users\\arthu\\OneDrive\\Documentos\\study\\SHmechanics\\Assets\\Scripts\\TankControls.cs",
-              "RelativeToolTip": "Assets\\Scripts\\TankControls.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-21T19:19:40.683Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "EnemyHealth.cs",
-              "DocumentMoniker": "C:\\Users\\arthu\\OneDrive\\Documentos\\study\\SHmechanics\\Assets\\Scripts\\EnemyHealth.cs",
+              "DocumentMoniker": "C:\\Users\\arthu\\Documents\\estudos\\unity\\SHMechanics\\Assets\\Scripts\\EnemyHealth.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\EnemyHealth.cs",
-              "ToolTip": "C:\\Users\\arthu\\OneDrive\\Documentos\\study\\SHmechanics\\Assets\\Scripts\\EnemyHealth.cs",
+              "ToolTip": "C:\\Users\\arthu\\Documents\\estudos\\unity\\SHMechanics\\Assets\\Scripts\\EnemyHealth.cs",
               "RelativeToolTip": "Assets\\Scripts\\EnemyHealth.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwCcAAACAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-21T20:50:58.855Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CameraZone.cs",
-              "DocumentMoniker": "C:\\Users\\arthu\\OneDrive\\Documentos\\study\\SHmechanics\\Assets\\Scripts\\CameraZone.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\CameraZone.cs",
-              "ToolTip": "C:\\Users\\arthu\\OneDrive\\Documentos\\study\\SHmechanics\\Assets\\Scripts\\CameraZone.cs",
-              "RelativeToolTip": "Assets\\Scripts\\CameraZone.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-22T21:01:34.4Z",
+              "WhenOpened": "2026-06-23T08:13:32.691Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CameraZone.cs",
-              "DocumentMoniker": "C:\\Users\\arthu\\OneDrive\\Documentos\\study\\SHmechanics\\Assets\\Scripts\\CameraZone.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\CameraZone.cs",
-              "ToolTip": "C:\\Users\\arthu\\OneDrive\\Documentos\\study\\SHmechanics\\Assets\\Scripts\\CameraZone.cs",
-              "RelativeToolTip": "Assets\\Scripts\\CameraZone.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-21T20:01:38.673Z"
             }
           ]
         }

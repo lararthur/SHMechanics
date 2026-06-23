@@ -129,25 +129,8 @@ public class TankControls : MonoBehaviour
         // Lock the player's inputs at the very start of the spin
         isQuickTurning = true;
 
-        Quaternion startRotation = transform.rotation;
-        // Calculate exactly where they need to end up (current rotation + 180 degrees on Y)
-        Quaternion targetRotation = startRotation * Quaternion.Euler(0f, 180f, 0f);
-
-        float timeElapsed = 0f;
-
-        // Loop this block of code until the duration is reached
-        while (timeElapsed < quickTurnDuration)
-        {
-            // Slerp (Spherical Linear Interpolation) smoothly blends between two rotations based on time
-            transform.rotation = Quaternion.Slerp(startRotation, targetRotation, timeElapsed / quickTurnDuration);
-            timeElapsed += Time.deltaTime;
-
-            // "yield return null" tells Unity to pause this function here, render the frame, and come back next frame
-            yield return null;
-        }
-
-        // Hard snap to the exact 180-degree rotation at the very end to prevent microscopic floating-point errors
-        transform.rotation = targetRotation;
+        // Call the utility function! We pass 'transform', the 180-degree Y offset, and the duration.
+        yield return StartCoroutine(TransformUtils.RotationAnimation(transform, new Vector3(0f, 180f, 0f), quickTurnDuration));
 
         // Unlock the player's inputs so they can move again
         isQuickTurning = false;
