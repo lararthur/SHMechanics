@@ -13,17 +13,20 @@ public class EnemyAI : MonoBehaviour
     public float chaseSpeed = 3f;
     public float wanderSpeed = 1.5f;
     public float turnSpeed = 5f;    // So it doesn't instantly snap to face you
+    private float currentSpeed = 0f; // Tracks the speed to be used in FixedUpdate
 
     // The State Machine
     public enum AIState { Idle, Chasing, Wandering }
     public AIState currentState = AIState.Idle;
 
     private EnemyHealth enemyHealth;
+    private Rigidbody rb; // NEW: Reference to the Rigidbody
 
     void Start()
     {
         // Grab the health script so we know if this enemy is dead
         enemyHealth = GetComponent<EnemyHealth>();
+        rb = GetComponent<Rigidbody>(); // NEW: Grab the Rigidbody component
 
         // If you forgot to assign the player in the inspector, it will try to find it
         if (player == null)
@@ -34,8 +37,12 @@ public class EnemyAI : MonoBehaviour
 
     void Update()
     {
-        // If the enemy is dead, completely stop the AI from running
-        if (enemyHealth != null && enemyHealth.isDead) return;
+        // If dead, stop everything
+        if (enemyHealth != null && enemyHealth.isDead)
+        {
+            currentSpeed = 0f;
+            return;
+        }
 
         // Calculate the distance between the enemy and the player
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
@@ -61,6 +68,26 @@ public class EnemyAI : MonoBehaviour
         {
             Wander();
         }
+        else
+        {
+            currentSpeed = 0f;
+        }
+    }
+
+    void FixedUpdate()
+    {
+        // If the enemy is dead, don't execute physics movement
+        if (enemyHealth != null && enemyHealth.isDead) return;
+
+        // Walk forward applying movement safely inside the physics loop
+        if (currentSpeed > 0.01f)
+        {
+            // Calculate the next position instead of translating directly
+            Vector3 targetMovement = transform.forward * currentSpeed * Time.fixedDeltaTime;
+
+            // MovePosition checks for wall collisions BEFORE moving, stopping the enemy instantly
+            rb.MovePosition(rb.position + targetMovement);
+        }
     }
 
     private void ChasePlayer()
@@ -76,14 +103,13 @@ public class EnemyAI : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * turnSpeed);
         }
 
-        // Walk forward
-        transform.Translate(Vector3.forward * chaseSpeed * Time.deltaTime, Space.Self);
+        currentSpeed = chaseSpeed;
     }
 
     private void Wander()
     {
         // Just keep walking straight forward at a slower pace
-        transform.Translate(Vector3.forward * wanderSpeed * Time.deltaTime, Space.Self);
+        currentSpeed = wanderSpeed;
     }
 
     // --- EDITOR VISUALS ---
